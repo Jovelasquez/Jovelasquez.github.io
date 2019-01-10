@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Jos&eacute; Octavio Vel&aacute;squez - Full-Stack Web Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Personal Website">
+  <meta name="author" content="Jose Octavio Velasquez">
+  <link rel="stylesheet" href="/css/custom.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <main>
+    <h2>Jose Velasquez</h2>
+    <h3>full-stack Web Developer</h3>
+    <hr class="style12">
+    <ul>
+      <li>
+        <a href="/me">Resume</a>
+      </li>
+      <li>
+        <a href="/me/portafolio">Portafolio</a>
+      </li>
+      <li>
+        <a href="/me/contacts">Contacts</a>
+      </li>
+    </ul>
+    <footer>
+      <p></p>
+    </footer>
+  </main>
+  <script>
+    $(document).ready(function () {
+      var mouseX, mouseY;
+      var ww = $(window).width();
+      var wh = $(window).height();
+      var traX, traY;
+      $(document).mousemove(function (e) {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+        traX = ((4 * mouseX) / ww) + 40;
+        traY = ((4 * mouseY) / wh) + 50;
+        $("h2").css({ "background-position": traX + "%" + traY + "%" });
+      });
+    });
+  </script>
+</body>
+
+</html>
